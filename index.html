@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyWave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <button class="nav-brand" id="nav-brand" aria-label="Go to home">
+      <svg class="brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- left page -->
+        <path d="M16 9C13 8 9.5 8.5 7 10L6 11V25L7 24C9.5 22.5 13 22 16 23V9Z"
+              fill="#DBEAFE" stroke="#2563EB" stroke-width="1.8" stroke-linejoin="round"/>
+        <!-- right page -->
+        <path d="M16 9C19 8 22.5 8.5 25 10L26 11V25L25 24C22.5 22.5 19 22 16 23V9Z"
+              fill="#DBEAFE" stroke="#2563EB" stroke-width="1.8" stroke-linejoin="round"/>
+        <!-- wave lines on the right page -->
+        <path d="M18.5 14Q20 12.5 21.5 14Q23 15.5 24.5 14"
+              stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M18.5 18Q20 16.5 21.5 18Q23 19.5 24.5 18"
+              stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="brand-name">StudyWave</span>
+    </button>
+    <div class="nav-links">
+      <button class="nav-link active" data-view="dashboard">Dashboard</button>
+      <button class="nav-link" id="nav-add">Add Session</button>
+      <button class="nav-link" data-view="all-sessions">All Sessions</button>
+      <button class="nav-link" data-view="stats">Stats</button>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- Dashboard -->
+    <section id="view-dashboard" class="view active">
+      <h1 class="page-title" id="greeting"></h1>
+      <p class="page-subtitle">Here's a look at what you've been studying lately.</p>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <p class="stat-label">sessions this month</p>
+          <p class="stat-value" id="dash-sessions">0</p>
+          <span class="stat-badge">this month</span>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">hours studied</p>
+          <p class="stat-value" id="dash-hours">0h</p>
+          <span class="stat-badge">all time</span>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">top topic</p>
+          <p class="stat-value stat-value--sm" id="dash-top-topic">—</p>
+          <span class="stat-badge" id="dash-top-count">0 sessions</span>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2 class="section-title">Recent Sessions</h2>
+        <button class="btn-primary" id="btn-add-open">+ Add Session</button>
+      </div>
+
+      <div id="dash-list" class="session-list"></div>
+    </section>
+
+    <!-- All Sessions -->
+    <section id="view-all-sessions" class="view">
+      <h1 class="page-title">All Study Sessions</h1>
+      <p class="page-subtitle" id="all-subtitle">0 sessions, 0 hours total</p>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-topic="All">All</button>
+        <button class="filter-tab" data-topic="JavaScript">JavaScript</button>
+        <button class="filter-tab" data-topic="React">React</button>
+        <button class="filter-tab" data-topic="SQL">SQL</button>
+        <button class="filter-tab" data-topic="Node.js">Node.js</button>
+        <button class="filter-tab" data-topic="Python">Python</button>
+      </div>
+
+      <div id="all-list" class="session-list"></div>
+    </section>
+
+    <!-- Stats -->
+    <section id="view-stats" class="view">
+      <h1 class="page-title">Your Study Stats</h1>
+      <p class="page-subtitle">Here's a quick look at how your studying is going.</p>
+
+      <div class="stats-grid">
+        <div class="stats-card">
+          <p class="stats-value" id="stats-hours">0</p>
+          <p class="stats-label">hours studied</p>
+        </div>
+        <div class="stats-card">
+          <p class="stats-value" id="stats-sessions">0</p>
+          <p class="stats-label">total sessions</p>
+        </div>
+        <div class="stats-card">
+          <p class="stats-value" id="stats-topics">0</p>
+          <p class="stats-label">topics studied</p>
+        </div>
+        <div class="stats-card">
+          <p class="stats-value" id="stats-avg">0h</p>
+          <p class="stats-label">avg per session</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h2 class="chart-title">Hours by topic</h2>
+        <div id="chart-body" class="chart-body"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Add Session modal -->
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <h2 class="modal-title">Add a study session</h2>
+      <p class="modal-subtitle">Track what you studied and how long you were at it.</p>
+
+      <form id="session-form" novalidate>
+        <div class="form-fields">
+
+          <div class="form-group">
+            <label class="form-label" for="f-topic">Topic</label>
+            <select class="form-input" id="f-topic" required>
+              <option value="" disabled selected>Choose a topic...</option>
+              <option>JavaScript</option>
+              <option>React</option>
+              <option>SQL</option>
+              <option>Python</option>
+              <option>Node.js</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-date">Date</label>
+              <input class="form-input" type="date" id="f-date" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-duration">Duration (hours)</label>
+              <input class="form-input" type="number" id="f-duration"
+                     placeholder="e.g. 1.5" step="0.25" min="0.25" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="f-notes">Notes (optional)</label>
+            <textarea class="form-input form-textarea" id="f-notes"
+                      placeholder="What did you work on?"></textarea>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="btn-cancel">Cancel</button>
+          <button type="submit" class="btn-primary">Save Session</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
