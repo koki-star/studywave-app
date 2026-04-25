@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-StudyWave is a browser-based study session tracker built with HTML, CSS, and JavaScript. Students can log sessions, filter by topic, and view progress stats. Everything is saved in localStorage, so there is no login or backend.
+This file uses the StudyWave project as the example for a RACI chart. The main purpose here is to show how roles, responsibilities, and task ownership were organized during the project.
 
-This RACI chart is based on the real project files, especially index.html, js/app.js, README.md, and project-doc/project-kickoff.md.
+The full project overview is already covered in the main README.
 
 ## Main Objective
 

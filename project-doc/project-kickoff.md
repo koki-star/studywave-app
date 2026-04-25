@@ -20,7 +20,7 @@ April 2026
 
 ## Introduction Context
 
-StudyWave is a solo student project by Kokob Haile. I handled planning, design, development, testing, and documentation myself to practice the full project process from start to finish.
+This kickoff document was created for the StudyWave project to outline the plan before development began. It focuses on project goals, scope, timeline, risks, and the overall approach from start to finish.
 
 ---
 
