@@ -18,9 +18,9 @@ April 2026
 
 ---
 
-## Introductions Context
+## Introduction Context
 
-StudyWave is a solo student project created by Kokob Haile. I worked on the planning, design, development, testing, and documentation by myself. The goal was to build one complete project and learn the full process from start to finish.
+StudyWave is a solo student project by Kokob Haile. I handled planning, design, development, testing, and documentation myself to practice the full project process from start to finish.
 
 ---
 
@@ -28,9 +28,9 @@ StudyWave is a solo student project created by Kokob Haile. I worked on the plan
 
 ### Overview / Elevator Pitch
 
-Many students want to study better, but not everyone has a simple way to track their time and progress. StudyWave was made to help with that. It is a simple browser tool where students can log study sessions and see their progress.
+Many students want to study better, but not everyone has a simple way to track time and progress. StudyWave was built as a simple browser tool for logging study sessions and checking progress.
 
-This project was also a good chance for me to practice frontend development, UI design, and project planning through a real project.
+It was also a practical way for me to improve frontend, UI design, and project planning skills.
 
 ### Goals & Objectives
 
@@ -177,4 +177,4 @@ Risks and issues are logged in a simple tracker (Notion) with a short descriptio
 
 ## Final Summary
 
-StudyWave is a simple tool for students and also an important learning project for me. This kickoff document explains the direction, scope, timeline, responsibilities, and success plan for the project from idea to completion.
+StudyWave is both a useful student tool and a full learning project for me. This kickoff document captures the scope, plan, timeline, and responsibilities from start to submission.
