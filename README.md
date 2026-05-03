@@ -36,6 +36,18 @@ JavaScript, React, SQL, Python, Node.js
 
 ---
 
+## Project Management Artifacts
+
+As part of a project management assignment, I created three artifacts to plan and track the StudyWave project:
+
+* [Work Breakdown Structure (WBS)](project-management/WBS.md)
+* [Gantt Chart](project-management/Gantt.md)
+* [Kanban Board](project-management/Kanban.md)
+
+These documents show how the project was broken into tasks, scheduled over time, and tracked through completion.
+
+---
+
 ## How to Run
 
 No installation needed. Just open `index.html` in your browser.
