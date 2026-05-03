@@ -66,23 +66,47 @@ Or drag the `index.html` file into any browser window.
 
 For this project, I created different types of flow charts to show how the app works from different perspectives.
 
-### Basic Flow Chart
+<details>
+<summary>Basic Flow Chart</summary>
+
 ![Basic Flow Chart](diagrams/basic-flow-chart.png)
 
-### System Flow Chart
+</details>
+
+<details>
+<summary>System Flow Chart</summary>
+
 ![System Flow Chart](diagrams/system-flow-chart.png)
 
-### Workflow Diagram
+</details>
+
+<details>
+<summary>Workflow Diagram</summary>
+
 ![Workflow Diagram](diagrams/workflow-diagram.png)
 
-### Data Flow Chart
+</details>
+
+<details>
+<summary>Data Flow Chart</summary>
+
 ![Data Flow Chart](diagrams/data-flow-chart.png)
 
-### Decision Flow Chart
+</details>
+
+<details>
+<summary>Decision Flow Chart</summary>
+
 ![Decision Flow Chart](diagrams/decision-flow-chart.png)
 
-### Swimlane Flow Chart
+</details>
+
+<details>
+<summary>Swimlane Flow Chart</summary>
+
 ![Swimlane Flow Chart](diagrams/swimlane-flow-chart.png)
+
+</details>
 
 ---
 
