@@ -60,8 +60,6 @@ Or drag the `index.html` file into any browser window.
 
 ---
 
----
-
 ## Diagrams
 
 For this project, I created different types of flow charts to show how the app works from different perspectives.
